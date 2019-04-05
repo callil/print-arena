@@ -5,6 +5,7 @@
   "homepage": "https://callil.github.io/print-arena-hni/",
   "dependencies": {
     "are.na": "^0.1.1",
+    "gh-pages": "^2.0.1",
     "history": "^4.7.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
