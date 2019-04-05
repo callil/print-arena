@@ -1,0 +1,182 @@
+.App{
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.layout{
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.page{
+  width: 4.25in;
+  height: 11in;
+  float: left;
+  /* padding: 1rem; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow:hidden;
+  /* overflow: visible; */
+  /* transform: translateY(150px); */
+}
+
+.page div{
+  height: auto;
+  /* float: left; */
+}
+
+.front{
+  background-color: #fcf6f6;
+  float: left;
+  border: 1px solid #ccc;
+  transform: rotate3d(0,1,0,20deg) translateX(10px) scale(.7);
+  transform-origin: bottom right;
+}
+
+.back{
+  background-color: #fcf6f6;
+  border: 1px solid #ccc;
+  transform: rotate3d(0,-1,0,20deg) scale(.7);
+  transform-origin: bottom left;
+
+}
+
+img{
+  box-sizing: border-box;
+  max-width: 4.25;
+  max-height: 2.75in;
+  filter: grayscale(100%) opacity(90%);
+}
+
+.text{
+  max-width: 4in;
+  /* max-height: 4in; */
+}
+
+a{
+  word-break: break-all;
+}
+
+.imageTitle{
+  font-size: 8px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-10px)
+}
+
+.controls{
+  z-index: 999;
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: blue;
+}
+
+button{
+  width: 256px;
+  /* position: absolute; */
+  /* top: 0px; */
+  z-index: 99;
+  border: none;
+  color: blue;
+  /* background-color: #f1f1f1; */
+  border-radius: 5px;
+  padding: .5rem;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.print{
+  text-align: right;
+}
+
+
+.formTitle{
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.formBox{
+  width: 10vw;
+  border: none;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.formButton{
+  /* background-color: #4F4F4F; */
+  /* color: white; */
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: blue;
+  /*margin-right: 10px;*/
+}
+
+.formButton:hover{
+  background-color: black;
+}
+
+@media print {
+  @page {
+      size: Letter portrait;
+      margin: 0px;
+  }
+
+  .App{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .new{
+    display: none;
+  }
+
+  .layout{
+    transform:scale(1) translateY(0px);
+    width: 8.5in;
+    height: 11in;
+    
+    /* page-break-after: always;
+    overflow: hidden; */
+  }
+
+  .page{
+    transform: translateY(0px);
+  }
+
+  .controls{
+    display: none;
+  }
+  .front{
+    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
+  }
+  .back{
+    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
+  }
+}
