@@ -20,7 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channel: !this.props.URICurrentChannel ? 'new-computer-working-group' : this.props.URICurrentChannel,
+      channel: !this.props.URICurrentChannel ? 'screen-spaces-_-print' : this.props.URICurrentChannel,
       loaded: false,
       value: '',
       pageContent: {},
@@ -57,7 +57,7 @@ class App extends Component {
       this.setState({arenaContent: response.contents})
       this.makePage()
     }).catch(error => {
-      this.getChannelData('arena-influences')
+      this.getChannelData('screen-spaces-_-print')
 
     })
   }
