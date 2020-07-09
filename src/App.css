@@ -1,91 +1,82 @@
-.App {
+.App{
+  display: flex;
+  height: 100vh;
   margin: 0px;
   padding: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  counter-reset: section;
-  background-color: blanchedalmond;
-  padding: 4rem 0;
 }
 
-.layout {
-  width: calc(11in * 0.6);
+.layout{
+  width: 50vw;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  perspective: 1200px;
 }
 
-.page {
-  width: calc(5.5in * 0.6);
-  height: calc(8.5in * 0.6);
+.page{
+  width: 4.25in;
+  height: 11in;
   float: left;
-  padding: 1rem;
+  /* padding: 1rem; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-; */
   flex-wrap: wrap;
   align-items: flex-start;
-  overflow: hidden;
-  position: relative;
-  background-color: white;
-  border: 1px solid blanchedalmond;
-}
-.page:nth-child(even) {
-  page-break-after: always;
+  overflow:hidden;
+  /* overflow: visible; */
+  /* transform: translateY(150px); */
 }
 
-.counter::after {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: counter(section); /* Display the value of section counter */
-}
-
-.counter {
-  text-align: center;
-  bottom: 10px;
-  position: absolute;
-  font-size: calc(1em * 0.6);
-}
-.page:nth-child(even) .counter {
-  right: 1rem;
-}
-
-.page div {
+.page div{
   height: auto;
+  /* float: left; */
 }
 
-img {
+.front{
+  background-color: #fcf6f6;
+  float: left;
+  border: 1px solid #ccc;
+  transform: rotate3d(0,1,0,20deg) translateX(10px) scale(.7);
+  transform-origin: bottom right;
+}
+
+.back{
+  background-color: #fcf6f6;
+  border: 1px solid #ccc;
+  transform: rotate3d(0,-1,0,20deg) scale(.7);
+  transform-origin: bottom left;
+
+}
+
+img{
   box-sizing: border-box;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 4.25;
+  max-height: 2.75in;
   filter: grayscale(100%) opacity(90%);
 }
 
-.text p {
-  max-width: 5in;
-  font-size: calc(1em * 0.6);
-}
-.text small {
-  max-width: 5in;
-  font-size: calc(1em * 0.6);
+.text{
+  max-width: 4in;
+  /* max-height: 4in; */
 }
 
-a {
+a{
   word-break: break-all;
 }
 
-.imageTitle {
+.imageTitle{
   font-size: 8px;
   font-style: italic;
   text-align: center;
   width: 100%;
-  transform: translateY(-10px);
+  transform: translateY(-10px)
 }
 
-.controls {
+.controls{
   z-index: 999;
   width: 100%;
   padding: 1rem;
@@ -99,7 +90,7 @@ a {
   color: blue;
 }
 
-button {
+button{
   width: 256px;
   /* position: absolute; */
   /* top: 0px; */
@@ -108,22 +99,23 @@ button {
   color: blue;
   /* background-color: #f1f1f1; */
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: .5rem;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
 }
 
-.print {
+.print{
   text-align: right;
 }
 
-.formTitle {
+
+.formTitle{
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.formBox {
+.formBox{
   width: 10vw;
   border: none;
   padding: 10px;
@@ -134,7 +126,7 @@ button {
   margin-right: 10px;
 }
 
-.formButton {
+.formButton{
   /* background-color: #4F4F4F; */
   /* color: white; */
   border: none;
@@ -145,47 +137,46 @@ button {
   /*margin-right: 10px;*/
 }
 
-.formButton:hover {
+.formButton:hover{
   background-color: black;
 }
 
 @media print {
   @page {
-    size: Letter landscape;
-    margin: 0px;
+      size: Letter portrait;
+      margin: 0px;
   }
 
-  .App {
+  .App{
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 0;
   }
 
-  .layout {
-    width: 11in;
-    /* height: 8.5in; */
-    page-break-after: always;
-    overflow: hidden;
-  }
-
-  .page {
-    width: 5.5in;
-    height: 8.5in;
-  }
-
-  .controls {
+  .new{
     display: none;
   }
 
-  .counter {
-    font-size: calc(1em * 1.2);
+  .layout{
+    transform:scale(1) translateY(0px);
+    width: 8.5in;
+    height: 11in;
+    
+    /* page-break-after: always;
+    overflow: hidden; */
   }
 
-  .text p {
-    font-size: calc(1em * 1.2);
+  .page{
+    transform: translateY(0px);
   }
-  .text small {
-    font-size: calc(1em * 1.2);
+
+  .controls{
+    display: none;
+  }
+  .front{
+    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
+  }
+  .back{
+    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
   }
 }
