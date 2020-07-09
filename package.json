@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://callil.github.io/print-arena-hni/",
   "dependencies": {
-    "are.na": "^0.1.1",
+    "are.na": "^0.1.4",
     "gh-pages": "^2.0.1",
     "history": "^4.7.2",
     "react": "^16.6.3",
@@ -12,7 +12,8 @@
     "react-markdown": "^4.0.3",
     "react-scripts": "2.1.1",
     "react-textfit": "^1.1.0",
-    "react-url-query": "^1.4.0"
+    "react-url-query": "^1.4.0",
+    "use-fit-text": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
