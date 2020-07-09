@@ -33,8 +33,6 @@ function App() {
           .contents({ page: i + 1, per: 25 })
           .then((contents) => {
             allData = [...allData, ...contents]
-            console.log(contents)
-            console.log(allData)
           })
           .then(() => {
             setChannelData(
@@ -91,7 +89,9 @@ function App() {
     <div className="App">
       <div className="controls">
         {channelData ? (
-          <span>{channelData.length}</span>
+          <span>{`${channelData.length} pages rendered (~${
+            totalPages * 25 - channelData.length
+          } dropped) `}</span>
         ) : (
           <span>Loading...</span>
         )}
