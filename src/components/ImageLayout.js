@@ -1,14 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 const ImageLayout = (props) => (
-  <div className='image' style={props.style}>
-    <img alt='' className='to-print' src={props.url}/>
-    {/* <div className='itemText'> */}
-
-    {/* <p className='imageTitle'>{props.title}</p> */}
-    {/* <a href="src" className='desc'>{"are.na/block/" + props.id}</a> */}
-    {/* </div> */}
+  <div className="image" style={props.style}>
+    <small>
+      <i>{props.title}</i>
+    </small>
+    <br />
+    <img alt="" className="to-print" src={props.url} />
+    <br />
+    <small>added by {props.author}</small>
   </div>
-);
+)
 
 export default ImageLayout

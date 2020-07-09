@@ -1,182 +1,135 @@
-.App{
-  display: flex;
-  height: 100vh;
+.App {
   margin: 0px;
+  min-height: 100vh;
   padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  counter-reset: section;
+  background-color: blanchedalmond;
+  padding: 4rem 0;
 }
 
-.layout{
-  width: 50vw;
-  height: 70vh;
+.layout {
+  width: calc(11in * 0.6);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  perspective: 1200px;
+  flex-wrap: wrap;
 }
 
-.page{
-  width: 4.25in;
-  height: 11in;
+.page {
+  width: calc(5.5in * 0.6);
+  height: calc(8.5in * 0.6);
   float: left;
-  /* padding: 1rem; */
+  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-; */
   flex-wrap: wrap;
   align-items: flex-start;
-  overflow:hidden;
-  /* overflow: visible; */
-  /* transform: translateY(150px); */
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  border: 1px solid blanchedalmond;
 }
 
-.page div{
+.page:nth-child(even) {
+  page-break-after: always;
+}
+
+.counter::after {
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: counter(section); /* Display the value of section counter */
+}
+
+.counter {
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
+  font-size: calc(1em * 0.6);
+}
+.page:nth-child(even) .counter {
+  right: 1rem;
+}
+
+.page div {
   height: auto;
-  /* float: left; */
 }
 
-.front{
-  background-color: #fcf6f6;
-  float: left;
-  border: 1px solid #ccc;
-  transform: rotate3d(0,1,0,20deg) translateX(10px) scale(.7);
-  transform-origin: bottom right;
-}
-
-.back{
-  background-color: #fcf6f6;
-  border: 1px solid #ccc;
-  transform: rotate3d(0,-1,0,20deg) scale(.7);
-  transform-origin: bottom left;
-
-}
-
-img{
+img {
   box-sizing: border-box;
-  max-width: 4.25;
-  max-height: 2.75in;
+  max-width: 100%;
+  max-height: 100%;
   filter: grayscale(100%) opacity(90%);
 }
 
-.text{
-  max-width: 4in;
-  /* max-height: 4in; */
+.page p,
+small,
+li {
+  max-width: 5in;
+  font-size: calc(1em * 0.6);
 }
 
-a{
-  word-break: break-all;
-}
-
-.imageTitle{
-  font-size: 8px;
+a {
   font-style: italic;
   text-align: center;
   width: 100%;
-  transform: translateY(-10px)
 }
 
-.controls{
-  z-index: 999;
-  width: 100%;
-  padding: 1rem;
-  position: fixed;
+.controls {
+  border-radius: 5px;
+  position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
-  color: blue;
-}
-
-button{
-  width: 256px;
-  /* position: absolute; */
-  /* top: 0px; */
-  z-index: 99;
-  border: none;
-  color: blue;
-  /* background-color: #f1f1f1; */
-  border-radius: 5px;
-  padding: .5rem;
-  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-}
-
-.print{
   text-align: right;
-}
-
-
-.formTitle{
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.formBox{
-  width: 10vw;
-  border: none;
-  padding: 10px;
-  font-size: 12px;
-  font-weight: 500;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.formButton{
-  /* background-color: #4F4F4F; */
-  /* color: white; */
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  color: blue;
-  /*margin-right: 10px;*/
-}
-
-.formButton:hover{
-  background-color: black;
 }
 
 @media print {
   @page {
-      size: Letter portrait;
-      margin: 0px;
+    size: Letter landscape;
+    margin: 0px;
   }
 
-  .App{
-    display: flex;
-    flex-direction: column;
-    height: auto;
+  .new {
+    display: none;
+    padding: 0;
   }
 
-  .new{
+  .layout {
+    width: 11in;
+    /* height: 8.5in; */
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .page {
+    width: 5.5in;
+    height: 8.5in;
+  }
+
+  .controls {
     display: none;
   }
 
-  .layout{
-    transform:scale(1) translateY(0px);
-    width: 8.5in;
-    height: 11in;
-    
-    /* page-break-after: always;
-    overflow: hidden; */
+  .counter {
+    font-size: calc(1em * 1.2);
   }
 
-  .page{
-    transform: translateY(0px);
+  .text p {
+    font-size: calc(1em * 1.2);
   }
 
-  .controls{
-    display: none;
-  }
-  .front{
-    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
-  }
-  .back{
-    transform: rotate3d(0,0,0,0deg) translateX(0px) scale(1) !important;
+  .text small {
+    font-size: calc(1em * 1.2);
   }
 }
