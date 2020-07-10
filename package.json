@@ -2,7 +2,7 @@
   "name": "print2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://callil.github.io/print-arena-hni/",
+  "homepage": ".",
   "dependencies": {
     "are.na": "^0.1.4",
     "gh-pages": "^2.0.1",
