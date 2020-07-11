@@ -107,6 +107,14 @@ function App() {
             <small>SFPC 2020</small>
           </div>
         </section>
+        <section className="page">
+          <div className="text">
+            <p>Introduction</p>
+
+            essay here
+
+          </div>
+        </section>
         {channelData &&
           channelData
             .filter(
