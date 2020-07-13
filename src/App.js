@@ -121,6 +121,14 @@ function App() {
 
           </div>
         </section>
+        <section className="page">
+          <div className="text">
+            <p>Contributors</p>
+
+            contributors
+
+          </div>
+        </section>
         {channelData &&
           channelData
             .filter(

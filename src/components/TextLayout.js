@@ -12,7 +12,7 @@ const TextLayout = (props) => {
       </small> */}
       <h1>{props.title}</h1>
       <div className="authorstyle" dangerouslySetInnerHTML={createMarkup(props.content)} />
-      <div className="authorstyle" dangerouslySetInnerHTML={createMarkup(props.description)} />
+      <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
       <div className="author"><b>— defined by {props.author} {props.authorid}</b></div>
     </div>
   )

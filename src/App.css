@@ -69,13 +69,25 @@ img {
 .page p,
 li {
   max-width: 5in;
-  font-size: calc(1em * 1);
+  font-size: calc(1em * 1.1);
 }
 
 small, .author {
   max-width: 5in;
   font-size: calc(1em * 0.75);
 }
+
+.description {
+  border-left: .03in solid #000;
+  max-width: 5in;
+  font-size: calc(1em * 0.75);
+}
+
+.description p {
+  width: 2.5in;
+  padding-left: .1in;
+}
+
 
 h1 {
   font-size: calc(1em * .75);
@@ -160,4 +172,8 @@ small {
 
 .author173503 .authorstyle {
   font-family: Times;
+}
+
+.author173502 .authorstyle {
+  font-family: Courier;
 }

@@ -15,7 +15,7 @@ const ImageLayout = (props) => (
     <img alt="" className="to-print" src={props.url} />
     <br />
 
-    <small dangerouslySetInnerHTML={createMarkup(props.description)} />
+    <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
 
     <div className="author"><b>— defined by {props.author}</b></div>
   </div>
