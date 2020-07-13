@@ -6,14 +6,14 @@ function createMarkup(text) {
 
 const TextLayout = (props) => {
   return (
-    <div className="text" style={props.style}>
+    <div className={"text author" + props.authorid} style={props.style}>
       {/* <small>
         <i>{props.title}</i>
       </small> */}
       <h1>{props.title}</h1>
-      <div dangerouslySetInnerHTML={createMarkup(props.content)} />
-      <div dangerouslySetInnerHTML={createMarkup(props.description)} />
-      <div className="author {props.author}"><b>— defined by {props.author} {props.authorid}</b></div>
+      <div className="authorstyle" dangerouslySetInnerHTML={createMarkup(props.content)} />
+      <div className="authorstyle" dangerouslySetInnerHTML={createMarkup(props.description)} />
+      <div className="author"><b>— defined by {props.author} {props.authorid}</b></div>
     </div>
   )
 }
