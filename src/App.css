@@ -170,17 +170,22 @@ small {
 }
 
 
+/* krystal */
 .author173503 .authorstyle {
   font-family: Times;
   color: red;
 }
 
+
+/* paras */
 .author173502 .authorstyle {
   font-family: Courier;
   color: blue;
 }
 
-.author126808 .authorstyle {
+
+/* connor */
+.author13842 .authorstyle {
   font-family: Courier;
-  color: orange;
+  color: green;
 }
