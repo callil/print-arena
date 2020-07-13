@@ -5,7 +5,7 @@ function createMarkup(text) {
 }
 
 const ImageLayout = (props) => (
-  <div className="image" style={props.style}>
+  <div className={"image author" + props.authorid} style={props.style}>
     {/* <small>
       <i>{props.title}</i>
     </small> */}
@@ -17,7 +17,10 @@ const ImageLayout = (props) => (
 
     <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
 
-    <div className="author"><b>— defined by {props.author}</b></div>
+
+
+
+    <div className="author"><b>— added by {props.author}</b></div>
   </div>
 )
 

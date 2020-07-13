@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   counter-reset: section;
-  background-color: blanchedalmond;
+  background-color: #eee;
   padding: 4rem 0;
 }
 
@@ -33,7 +33,7 @@
   overflow: hidden;
   position: relative;
   background-color: white;
-  border: 1px solid blanchedalmond;
+  border: 1px solid #eee;
 }
 
 .page:nth-child(even) {
@@ -84,7 +84,7 @@ small, .author {
 }
 
 .description p {
-  width: 2.5in;
+  width: 2.75in;
   padding-left: .1in;
 }
 
@@ -172,8 +172,15 @@ small {
 
 .author173503 .authorstyle {
   font-family: Times;
+  color: red;
 }
 
 .author173502 .authorstyle {
   font-family: Courier;
+  color: blue;
+}
+
+.author126808 .authorstyle {
+  font-family: Courier;
+  color: orange;
 }
