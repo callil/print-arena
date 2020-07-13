@@ -67,14 +67,19 @@ img {
 }
 
 .page p,
-small,
 li {
   max-width: 5in;
-  font-size: calc(1em * 0.6);
+  font-size: calc(1em * 1);
+}
+
+small, .author {
+  max-width: 5in;
+  font-size: calc(1em * 0.75);
 }
 
 h1 {
-  font-size: calc(1em * 1.2);
+  font-size: calc(1em * .75);
+  text-transform: capitalize;
 }
 
 a {
@@ -100,7 +105,7 @@ a {
 
 
 small {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 @media print {
@@ -139,15 +144,15 @@ small {
     font-size: calc(1em * 1.2);
   }
 
-  .text p {
-    font-size: calc(1em * 1.2);
+  .text p, li {
+    font-size: calc(1em * 2);
   }
 
-  .text small {
-    font-size: calc(1em * 1.2);
+  .text small, .author {
+    font-size: calc(1em * 1.5);
   }
 
   h1 {
-    font-size: calc(1em * 2.2);
+    font-size: calc(1em * 1.5);
   }
 }

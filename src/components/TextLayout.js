@@ -12,7 +12,8 @@ const TextLayout = (props) => {
       </small> */}
       <h1>{props.title}</h1>
       <div dangerouslySetInnerHTML={createMarkup(props.content)} />
-      <small>added by {props.author}</small>
+      <div dangerouslySetInnerHTML={createMarkup(props.description)} />
+      <div className="author {props.author}"><b>— defined by {props.author} {props.authorid}</b></div>
     </div>
   )
 }
