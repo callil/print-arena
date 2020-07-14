@@ -3,7 +3,9 @@
 /* krystal */
 .author173503 .authorstyle {
   font-family: Times;
-  color: rgb(185, 164, 76);
+  /* color: rgb(185, 164, 76); */
+  color: cmyk(55, 0, 26, 28);
+  color: #52B788;
 }
 
 
@@ -26,6 +28,13 @@
   color: rgb(86, 110, 61);
 }
 
+/* angus */
+.author173746 .authorstyle {
+  font-family: Arial;
+  font-style: italic;
+  color: #BF4342;
+  color: cmyk(0, 65, 65, 25);
+}
 
 
 /* tristian */
@@ -33,4 +42,19 @@
   font-family: Arial;
   font-weight: bold;
   color: rgb(82, 183, 136);
+}
+
+/* matt ross */
+.author126808 .authorstyle {
+  font-family: Arial;
+}
+
+/* ilona */
+.author72134 .authorstyle {
+  font-family: Arial;
+}
+
+/* tyler */
+.author25047 .authorstyle {
+  font-family: Arial;
 }
