@@ -3,19 +3,34 @@
 /* krystal */
 .author173503 .authorstyle {
   font-family: Times;
-  color: red;
+  color: rgb(185, 164, 76);
 }
 
 
 /* paras */
 .author173502 .authorstyle {
   font-family: Courier;
-  color: blue;
+  color: rgb(250, 121, 33);
 }
 
 
 /* connor */
 .author13842 .authorstyle {
   font-family: Courier;
-  color: green;
+  color: rgb(86, 110, 61);
+}
+
+/* sara */
+.author173494 .authorstyle {
+  font-family: Courier;
+  color: rgb(86, 110, 61);
+}
+
+
+
+/* tristian */
+.author173504 .authorstyle {
+  font-family: Arial;
+  font-weight: bold;
+  color: rgb(82, 183, 136);
 }
