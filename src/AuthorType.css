@@ -38,6 +38,17 @@
   font-weight: 300;
 }
 
+/* jessica */
+.author173499 .authorstyle {
+  font-family: Helvetica;
+  color: #289D2C;
+}
+
+/* paras */
+.author173502 .authorstyle {
+  font-family: Courier;
+  color: #6B8E23;
+}
 
 /* ———————————————————————————— */
 
@@ -51,11 +62,7 @@
 }
 
 
-/* paras */
-.author173502 .authorstyle {
-  font-family: Courier;
-  color: rgb(250, 121, 33);
-}
+
 
 
 /* connor */
@@ -115,11 +122,6 @@
   color: blue;
 }
 
-/* jessica */
-.author173499 .authorstyle {
-  font-family: Optima;
-  color: teal;
-}
 
 /* david */
 .author37613 .authorstyle {
