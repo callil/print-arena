@@ -1,3 +1,17 @@
+@import url("https://use.typekit.net/kid6drd.css");
+
+/* tristian */
+.author173504 .authorstyle {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFC20D;
+  font-size: 120%;
+}
+
+
+
+/* ———————————————————————————— */
 
 
 /* krystal */
@@ -37,12 +51,7 @@
 }
 
 
-/* tristian */
-.author173504 .authorstyle {
-  font-family: Arial;
-  font-weight: bold;
-  color: #FFC20D;
-}
+
 
 /* matt ross */
 .author126808 .authorstyle {

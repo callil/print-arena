@@ -2,6 +2,19 @@
   -webkit-print-color-adjust:exact;
 }
 
+a {
+  word-wrap: break-word;
+  font-style: none;
+  color: inherit;
+  /* text-decoration: none; */
+  /* border-bottom: 1px solid dotted; */
+  /* word-break: break-all; */
+}
+
+a:hover {
+  color: #000;
+}
+
 .App {
   margin: 0px;
   min-height: 100vh;
@@ -85,7 +98,7 @@ img {
 
 .page p,
 li {
-  max-width: 5in;
+  max-width: calc((5.5in * 0.6) - (1.5in / 2));
   font-size: calc(1em * 1);
 }
 
@@ -96,12 +109,11 @@ small, .author {
 
 .description {
   border-left: .02in solid #000;
-  max-width: 5in;
   font-size: calc(1em * 0.75);
 }
 
 .description p {
-  width: 2.75in;
+  width: calc((5.5in * 0.6) - (1.5in / 2));
   padding-left: .1in;
   padding-top: .05in;
   padding-bottom: .05in;

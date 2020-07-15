@@ -20,7 +20,7 @@ const ImageLayout = (props) => (
 
 
 
-    <div className="author"><b>— added by {props.author} {props.authorid} */}</b></div>
+    <div className="author"><b>— added by {props.author} </b></div>
   </div>
 )
 
