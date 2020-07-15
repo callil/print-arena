@@ -149,6 +149,7 @@ h1 {
 
 h1 {
     text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 h1::first-letter {

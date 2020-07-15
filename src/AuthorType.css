@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/kid6drd.css");
+
 
 /* tristian */
 .author173504 .authorstyle {
@@ -22,11 +22,33 @@
   color: #5113BD;
 }
 
+/* angus */
+.author173746 .authorstyle {
+  font-family: 'Special Elite', cursive;
+  font-style: normal;
+  color: #000;
+} .author173746 .authorstyle p, .author173746 .authorstyle li  {
+  background-color: #C9F2F2;
+}
+
+/* tash */
+.author159845 .authorstyle {
+  font-family: 'Ubuntu', sans-serif;
+  color: #df73ff;
+  font-weight: 300;
+}
 
 
 /* ———————————————————————————— */
 
 
+
+
+/* makayla */
+.author102862 .authorstyle {
+  font-family: Courier;
+  color: orange;
+}
 
 
 /* paras */
@@ -48,13 +70,7 @@
   color: rgb(86, 110, 61);
 }
 
-/* angus */
-.author173746 .authorstyle {
-  font-family: Arial;
-  font-style: italic;
-  color: #BF4342;
-  color: cmyk(0, 65, 65, 25);
-}
+
 
 
 
@@ -91,11 +107,7 @@
 
 
 
-/* tash */
-.author159845 .authorstyle {
-  font-family: Georgia;
-  color: green;
-}
+
 
 /* ryan */
 .author23411 .authorstyle {

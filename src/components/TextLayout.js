@@ -14,7 +14,7 @@ const TextLayout = (props) => {
       <div className="authorstyle" dangerouslySetInnerHTML={createMarkup(props.content)} />
       <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
       <div className="author"><b>— contributed by {props.author}
-        {props.authorid}
+        {/* {props.authorid} */}
        </b></div>
     </div>
   )
