@@ -41,7 +41,7 @@
 .author173504 .authorstyle {
   font-family: Arial;
   font-weight: bold;
-  color: rgb(82, 183, 136);
+  color: #FFC20D;
 }
 
 /* matt ross */
@@ -164,4 +164,10 @@
 .author88210 .authorstyle {
   font-family: Optima;
   color: red;
+}
+
+/* lauren */
+.author17810 .authorstyle {
+  font-family: Times;
+  color: green;
 }

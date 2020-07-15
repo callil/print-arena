@@ -76,9 +76,11 @@
 
 img {
   box-sizing: border-box;
-  max-width: 100%;
+  max-width: calc((5.5in * 0.6) - (1.5in / 2));
   max-height: 100%;
-  /* filter: grayscale(100%) opacity(90%); */
+  /* max-width: 100%;
+  max-height: 100%; */
+  filter: grayscale(100%) opacity(90%);
 }
 
 .page p,

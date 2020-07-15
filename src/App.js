@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Arena from 'are.na'
 import './App.css'
 import './AuthorType.css'
+import './Fonts.css'
 
 import ImageLayout from './components/ImageLayout'
 import TextLayout from './components/TextLayout'
