@@ -78,6 +78,7 @@ a:hover {
   position: absolute;
   font-size: calc(1em * 0.6);
   font-weight: bold;
+  opacity: 0;
 }
 .page:nth-child(even) .counter {
   right: 1rem;
@@ -105,6 +106,19 @@ li {
 small, .author {
   max-width: 5in;
   font-size: calc(1em * 0.6);
+  position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 8.5in;
+    width: 100%;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding-bottom: calc(0.3in * 0.6);
+    pointer-events: none;
+    margin: 0.5em 0px;
 }
 
 .description {
