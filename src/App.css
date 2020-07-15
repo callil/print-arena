@@ -97,6 +97,9 @@ img {
   filter: grayscale(100%) opacity(100%);
 }
 
+img:hover {
+  filter: none;
+}
 .page p,
 li {
   max-width: calc((5.5in * 0.6) - (1.5in / 2));
