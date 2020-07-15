@@ -91,7 +91,7 @@ a:hover {
 img {
   box-sizing: border-box;
   max-width: calc((5.5in * 0.6) - (1.5in / 2));
-  max-height: 100%;
+  max-height: calc((8.5in * 0.6) - 1in);
   /* max-width: 100%;
   max-height: 100%; */
   filter: grayscale(100%) opacity(90%);
@@ -143,9 +143,16 @@ blockquote {
 
 h1 {
   font-size: calc(1em * .75);
-  text-transform: capitalize;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+h1 {
+    text-transform: lowercase;
+}
+
+h1::first-letter {
+    text-transform: uppercase;
 }
 
 a {

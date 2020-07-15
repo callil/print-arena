@@ -12,7 +12,7 @@ const ImageLayout = (props) => (
 
     <h1>{props.title}</h1>
     <br />
-    <img alt="" className="to-print" src={props.url} />
+    <center><img alt="" className="to-print" src={props.url} /></center>
     <br />
 
     <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
@@ -20,7 +20,7 @@ const ImageLayout = (props) => (
 
 
 
-    <div className="author"><b>— added by {props.author} </b></div>
+    <div className="author"><b>— contributed by {props.author} </b></div>
   </div>
 )
 
