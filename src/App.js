@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Arena from 'are.na'
 import './App.css'
+import './AuthorType.css'
+import './Fonts.css'
 
 import ImageLayout from './components/ImageLayout'
 import TextLayout from './components/TextLayout'
@@ -60,6 +62,8 @@ function App() {
             id={item.id}
             title={item.generated_title}
             author={item.connected_by_username}
+            description={item.description_html}
+            authorid={item.connected_by_user_id}
             key={i}
           />
         )
@@ -70,6 +74,8 @@ function App() {
             id={item.id}
             title={item.generated_title}
             author={item.connected_by_username}
+            description={item.description_html}
+            authorid={item.connected_by_user_id}
             key={i}
           />
         )
@@ -81,6 +87,8 @@ function App() {
             title={item.generated_title}
             image={item.image.original.url}
             author={item.connected_by_username}
+            description={item.description_html}
+            authorid={item.connected_by_user_id}
             key={i}
           />
         )
@@ -100,11 +108,13 @@ function App() {
           <span>Loading...</span>
         )}
         <span>
-          <button className="print" onClick={() => (
-            setMode(!mode)
-            setCurrentSpread(0)
-          )
-        }>
+          <button
+            className="print"
+            onClick={() =>
+              setMode(!mode)
+              // setCurrentSpread(0)
+            }
+          >
             {mode ? 'View as manuscript' : 'View as book'}
           </button>
           <button className="print" onClick={(e) => window.print()}>
@@ -114,12 +124,24 @@ function App() {
       </div>
 
       <div className="layout">
-        {/* <section className="page">
+        <section className="page">
           <div className="text">
             <p>Dark Matters Dictionary</p>
             <small>SFPC 2020</small>
           </div>
-        </section> */}
+        </section>
+        <section className="page">
+          <div className="text">
+            <p>Introduction</p>
+            intro text here
+          </div>
+        </section>
+        <section className="page">
+          <div className="text">
+            <p>Contributors</p>
+            contributors
+          </div>
+        </section>
         {channelData &&
           channelData
             .filter((item, i) =>
