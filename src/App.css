@@ -40,11 +40,6 @@
   page-break-after: always;
 }
 
-.counter::after {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: counter(section); /* Display the value of section counter */
-}
-
 .counter {
   text-align: center;
   bottom: 10px;

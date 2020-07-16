@@ -10,8 +10,12 @@ const arena = new Arena({
   accessToken: process.env.REACT_APP_TOKEN,
 })
 function App() {
-  const [channelData, setChannelData] = useState([{ ok: 'hi' }])
+  const [channelData, setChannelData] = useState([])
   const [totalPages, setTotalPages] = useState(0)
+  const [currentSpread, setCurrentSpread] = useState(2)
+  const [mode, setMode] = useState(true)
+
+  //   const [mode, setMode] = useState[false]
 
   useEffect(() => {
     arena
@@ -95,30 +99,51 @@ function App() {
         ) : (
           <span>Loading...</span>
         )}
-        <button className="print" onClick={(e) => window.print()}>
-          Print
-        </button>
+        <span>
+          <button className="print" onClick={() => (
+            setMode(!mode)
+            setCurrentSpread(0)
+          )
+        }>
+            {mode ? 'View as manuscript' : 'View as book'}
+          </button>
+          <button className="print" onClick={(e) => window.print()}>
+            Print
+          </button>
+        </span>
       </div>
 
       <div className="layout">
-        <section className="page">
+        {/* <section className="page">
           <div className="text">
             <p>Dark Matters Dictionary</p>
             <small>SFPC 2020</small>
           </div>
-        </section>
+        </section> */}
         {channelData &&
           channelData
-            .filter(
-              (item) =>
-                item.generated_title !== 'Untitled' &&
-                item.class !== 'Attachment'
+            .filter((item, i) =>
+              mode
+                ? i === currentSpread ||
+                  (i === currentSpread + 1 &&
+                    item.generated_title !== 'Untitled' &&
+                    item.class !== 'Attachment')
+                : item.generated_title !== 'Untitled' &&
+                  item.class !== 'Attachment'
             )
             .map((item, i) => {
               return (
-                <section key={i} className="page">
+                <section
+                  key={i}
+                  className="page"
+                  onClick={() =>
+                    mode && i === currentSpread
+                      ? setCurrentSpread(currentSpread - 2)
+                      : setCurrentSpread(currentSpread + 2)
+                  }
+                >
                   {makePage(item, i)}
-                  <div className="counter"></div>
+                  <div className="counter">{currentSpread + i}</div>
                 </section>
               )
             })}
