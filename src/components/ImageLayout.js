@@ -1,14 +1,26 @@
 import React from 'react'
 
+function createMarkup(text) {
+  return { __html: text }
+}
+
 const ImageLayout = (props) => (
-  <div className="image" style={props.style}>
-    <small>
+  <div className={"image author" + props.authorid} style={props.style}>
+    {/* <small>
       <i>{props.title}</i>
-    </small>
+    </small> */}
+
+    <h1>{props.title}</h1>
     <br />
-    <img alt="" className="to-print" src={props.url} />
+    <center><img alt="" className="to-print" src={props.url} /></center>
     <br />
-    <small>added by {props.author}</small>
+
+    <div className="authorstyle description" dangerouslySetInnerHTML={createMarkup(props.description)} />
+
+
+
+
+    <div className="author"><b>— contributed by {props.author} </b></div>
   </div>
 )
 
