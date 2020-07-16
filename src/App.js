@@ -127,7 +127,7 @@ function App() {
           <div className="text">
             <p>Contributors</p>
 
-            contributors
+            <p class="author173504 authorstyle">Tristian Sauer</p>
 
           </div>
         </section>
